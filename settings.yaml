@@ -1,0 +1,123 @@
+﻿# تنظیمات MT5
+mt5:
+  path: "C:\Program Files\Alpari MT5\terminal64.exe"
+  login: 228019286
+  password: "Pass"
+  server: "Alpari-MT5"
+  timeout: 60000
+  portable_mode: false
+
+# تنظیمات ریسک
+risk:
+  max_daily_risk: 1.5
+  max_trade_risk: 1.0
+  max_drawdown: 5.0
+  max_positions: 3
+  daily_loss_limit: 2.0
+  max_leverage: 30
+  min_risk_reward: 1.5
+  max_consecutive_losses: 3
+  correlation_limit: 0.7
+  sector_exposure_limit: 30
+  max_risk_score: 6.0
+  min_confidence: 60
+
+# تنظیمات معاملاتی
+trading:
+  symbols:
+    - EURUSD
+    - GBPUSD
+    - XAUUSD
+    - USDJPY
+    - USDCAD
+    - AUDUSD
+    - NZDUSD
+    - USDCHF
+  timeframes:
+    - M15
+    - H1
+    - H4
+    - D1
+  trading_hours_start: 10
+  trading_hours_end: 18
+  weekend_trading: false
+  news_filter: true
+  max_spread: 20
+
+# تنظیمات تحلیل
+analysis:
+  indicators:
+    trend:
+      - EMA_9
+      - EMA_20
+      - EMA_50
+      - EMA_200
+      - MACD
+      - ADX
+      - Ichimoku
+    momentum:
+      - RSI
+      - Stochastic
+      - WilliamsR
+      - CCI
+      - MFI
+    volatility:
+      - BollingerBands
+      - ATR
+      - KeltnerChannel
+    volume:
+      - OBV
+      - VolumeSMA
+      - VolumeProfile
+  patterns:
+    candlestick: true
+    classic: true
+    harmonic: false
+    fibonacci: true
+  volume_analysis: true
+  sentiment_analysis: false
+  market_profile: true
+
+# تنظیمات سیستم
+system:
+  monitoring_interval: 5
+  analysis_interval: 300
+  data_cache_timeout: 60
+  max_reconnect_attempts: 5
+  auto_start: true
+  emergency_lock_enabled: true
+  violation_logging: true
+
+# تنظیمات داشبورد
+dashboard:
+  enabled: true
+  port: 8501
+  host: "localhost"
+  refresh_rate: 5
+  theme: "dark"
+  language: "fa"
+
+# تنظیمات گزارش‌گیری
+reporting:
+  daily_report: true
+  weekly_report: true
+  monthly_report: true
+  report_time: "23:00"
+  save_path: "./reports/"
+  email_alerts: false
+  telegram_alerts: false
+
+# تنظیمات امنیتی
+security:
+  enable_2fa: false
+  session_timeout: 3600
+  max_login_attempts: 3
+  log_all_actions: true
+  encrypt_data: false
+
+# تنظیمات توسعه
+development:
+  debug_mode: false
+  log_level: "INFO"
+  test_mode: false
+  mock_data: false
